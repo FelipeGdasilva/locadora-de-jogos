@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎮 Locadora de Jogos - API REST
 
-## Getting Started
+API RESTful para gerenciamento de uma locadora de jogos, desenvolvida para praticar rotas, manipulação de banco de dados e regras de negócio no back-end.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js** (App Router / Route Handlers)
+- **TypeScript**
+- **Prisma ORM**
+- **PostgreSQL**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📌 Status do Desenvolvimento
 
-## Learn More
+- [x] Modelagem do banco de dados no PostgreSQL
+- [x] Configuração do Prisma ORM e conexão com o banco
+- [x] CRUD de **Jogos** (`/api/jogos`)
+- [x] CRUD de **Clientes** (`/api/clientes`)
+- [ ] CRUD de **Locações** (`/api/locacoes`)
+- [ ] Validações e Regras de Negócio
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Como rodar o projeto localmente
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone o repositório:**
 
-## Deploy on Vercel
+   ```bash
+   git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Instale as dependências:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm install
+   ```
+
+3. **Configure as variáveis de ambiente:**
+
+   Crie um arquivo `.env` na raiz do projeto com a URL do seu banco de dados PostgreSQL:
+
+   ```env
+   DATABASE_URL="postgresql://usuario:senha@localhost:5432/nome_do_banco?schema=public"
+   ```
+
+4. **Rode o servidor de desenvolvimento:**
+
+   ```bash
+   npm run dev
+   ```
+
+   A API estará rodando em http://localhost:3000.
