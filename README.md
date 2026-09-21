@@ -1,55 +1,108 @@
-# 🎮 Locadora de Jogos - API REST
+# 🎮 Locadora de Jogos API
 
-API RESTful para gerenciamento de uma locadora de jogos, desenvolvida para praticar rotas, manipulação de banco de dados e regras de negócio no back-end.
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-- **Next.js** (App Router / Route Handlers)
-- **TypeScript**
-- **Prisma ORM**
-- **PostgreSQL**
+> API RESTful desenvolvida para o gerenciamento completo de uma locadora de jogos, cobrindo o controle de acervo, gestão de clientes e regras de negócio para locações e devoluções.
 
 ---
 
-## 📌 Status do Desenvolvimento
+## 💻 Sobre o Projeto
 
-- [x] Modelagem do banco de dados no PostgreSQL
-- [x] Configuração do Prisma ORM e conexão com o banco
-- [x] CRUD de **Jogos** (`/api/jogos`)
-- [x] CRUD de **Clientes** (`/api/clientes`)
-- [ ] CRUD de **Locações** (`/api/locacoes`)
-- [ ] Validações e Regras de Negócio
+Este projeto foi desenvolvido com foco na construção de uma arquitetura sólida para o back-end, aplicando conceitos fundamentais de desenvolvimento web, modelagem relacional e manipulação de dados em tempo real.
+
+### 🎯 Principais Destaques
+
+- **Arquitetura Modular:** Organização clara das rotas com o Next.js App Router (Route Handlers).
+- **ORM Moderno:** Mapeamento objeto-relacional eficiente e migrações controladas via Prisma ORM.
+- **Ambiente Containerizado:** Banco de dados PostgreSQL isolado e padronizado utilizando Docker Compose.
 
 ---
 
-## 🛠️ Como rodar o projeto localmente
+## 🛠️ Tecnologias Utilizadas
 
-1. **Clone o repositório:**
+- **Linguagem:** TypeScript
+- **Framework:** Next.js (App Router / Route Handlers)
+- **Banco de Dados:** PostgreSQL
+- **ORM:** Prisma ORM
+- **Infraestrutura / Container:** Docker & Docker Compose
 
-   ```bash
-   git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
-   ```
+---
 
-2. **Instale as dependências:**
+## 📌 Status do Desenvolvimento & Recursos
 
-   ```bash
-   npm install
-   ```
+- [x] Modelagem do banco de dados relacional (PostgreSQL + Prisma)
+- [x] Ambiente de desenvolvimento padronizado com Docker Compose
+- [x] CRUD completo de **Jogos** (`/api/jogos`)
+- [x] CRUD completo de **Clientes** (`/api/clientes`)
+- [x] Módulo de **Locações** (`/api/locacoes`)
+- [x] Validação de dados de entrada na camada da API
 
-3. **Configure as variáveis de ambiente:**
+---
 
-   Crie um arquivo `.env` na raiz do projeto com a URL do seu banco de dados PostgreSQL:
+## 🤖 Endpoints da API
 
-   ```env
-   DATABASE_URL="postgresql://usuario:senha@localhost:5432/nome_do_banco?schema=public"
-   ```
+### 🕹️ Jogos (`/api/jogos`)
 
-4. **Rode o servidor de desenvolvimento:**
+| Método | Endpoint | Descrição |
+| :--- | :--- | :--- |
+| `GET` | `/api/jogos` | Retorna a lista completa de jogos cadastrados |
+| `POST` | `/api/jogos` | Cadastra um novo jogo no acervo |
 
-   ```bash
-   npm run dev
-   ```
+### 👤 Clientes (`/api/clientes`)
 
-   A API estará rodando em http://localhost:3000.
+| Método | Endpoint | Descrição |
+| :--- | :--- | :--- |
+| `GET` | `/api/clientes` | Retorna a lista completa de clientes |
+| `POST` | `/api/clientes` | Cadastra um novo cliente |
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### Pré-requisitos
+
+Certifique-se de ter instalado em sua máquina:
+
+- [Node.js](https://nodejs.org/) (v18+)
+- [Git](https://git-scm.com/)
+- [Docker & Docker Compose](https://www.docker.com/)
+
+### Passo a Passo
+
+Instalar as dependências:
+
+```bash
+npm install
+```
+
+Configurar as Variáveis de Ambiente:
+
+Crie um arquivo `.env` na raiz do projeto e configure a URL de conexão com o PostgreSQL:
+
+```env
+DATABASE_URL="postgresql://postgres:4321@localhost:5432/locadora_de_jogos?schema=public"
+```
+
+Subir o Banco de Dados com Docker:
+
+```bash
+docker compose up -d
+```
+
+Executar as Migrações do Prisma:
+
+```bash
+npx prisma migrate dev
+```
+
+Iniciar o Servidor de Desenvolvimento:
+
+```bash
+npm run dev
+```
+
+A API estará disponível em http://localhost:3000.
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
