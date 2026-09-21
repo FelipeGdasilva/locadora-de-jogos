@@ -78,7 +78,7 @@ Configurar as Variáveis de Ambiente:
 Crie um arquivo `.env` na raiz do projeto e configure a URL de conexão com o PostgreSQL:
 
 ```env
-DATABASE_URL="postgresql://postgres:4321@localhost:5432/locadora_de_jogos?schema=public"
+DATABASE_URL="postgresql://postgres:SUA_SENHA_AQUI@localhost:5432/locadora_de_jogos?schema=public"
 ```
 
 Subir o Banco de Dados com Docker:
